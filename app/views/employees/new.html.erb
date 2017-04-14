@@ -1,0 +1,7 @@
+<%= form_for :employee,url: employees_path do |f|%>
+	<%= f.text_field :first_name%>
+	<%= f.text_field :last_name%>
+	<%= f.text_field :email%>
+	<%= f.text_field :pan_number%>
+	<%= f.button :submit %>
+<% end %>

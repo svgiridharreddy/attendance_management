@@ -1,5 +1,7 @@
 <h1>Hey Welocome <%= current_employee.email %></h1>
-
+<% if current_employee.admin_role? %>
+	<%= link_to "Create new employee", new_employee_path%>
+<% end %>
 <% if employee_signed_in? %>
 	<%= link_to "Signout", destroy_employee_session_path,method: :delete%>
 <% end %>
